@@ -1,0 +1,48 @@
+{
+    "name": "io.extendreality.tilia.camerarigs.trackedalias.unity",
+    "displayName": "Tilia CameraRigs TrackedAlias Unity",
+    "description": "A Tracked Alias prefab providing generic aliases to the active camera rig prefab for the Unity software.",
+    "changelogUrl": "https://github.com/ExtendRealityLtd/Tilia.CameraRigs.TrackedAlias.Unity/blob/master/CHANGELOG.md",
+    "documentationUrl": "https://github.com/ExtendRealityLtd/Tilia.CameraRigs.TrackedAlias.Unity/tree/master/Documentation",
+    "licensesUrl": "https://github.com/ExtendRealityLtd/Tilia.CameraRigs.TrackedAlias.Unity/blob/master/LICENSE.md",
+    "version": "2.0.4",
+    "unity": "2018.3",
+    "unityRelease": "10f1",
+    "keywords": [
+        "pattern",
+        "camerarig",
+        "tracked",
+        "alias",
+        "vr",
+        "ar",
+        "xr",
+        "spatial"
+    ],
+    "homepage": "https://github.com/ExtendRealityLtd/Tilia.CameraRigs.TrackedAlias.Unity/",
+    "bugs": {
+        "url": "https://github.com/ExtendRealityLtd/Tilia.CameraRigs.TrackedAlias.Unity/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com/ExtendRealityLtd/Tilia.CameraRigs.TrackedAlias.Unity.git"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Extend Reality Ltd",
+        "email": "hello@extendreality.io",
+        "url": "https://github.com/ExtendRealityLtd"
+    },
+    "dependencies": {
+        "io.extendreality.zinnia.unity": "2.3.0"
+    },
+    "files": [
+        "*.md",
+        "*.meta",
+        "*.asmdef",
+        "*.xml",
+        "Documentation",
+        "Runtime",
+        "Editor",
+        "docfx.json"
+    ]
+}

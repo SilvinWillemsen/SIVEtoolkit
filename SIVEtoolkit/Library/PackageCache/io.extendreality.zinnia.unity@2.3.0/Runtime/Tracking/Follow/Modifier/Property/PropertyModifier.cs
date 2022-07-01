@@ -1,0 +1,92 @@
+﻿namespace Zinnia.Tracking.Follow.Modifier.Property
+{
+    using UnityEngine;
+    using Zinnia.Extension;
+    using Zinnia.Tracking.Follow;
+
+    /// <summary>
+    /// Modifies a specific property.
+    /// </summary>
+    public abstract class PropertyModifier : MonoBehaviour
+    {
+        #region Modifier Events
+        /// <summary>
+        /// Emitted before the property is modified.
+        /// </summary>
+        [Header("Modifier Events")]
+        public ObjectFollower.FollowEvent Premodified = new ObjectFollower.FollowEvent();
+        /// <summary>
+        /// Emitted after the property is modified.
+        /// </summary>
+        public ObjectFollower.FollowEvent Modified = new ObjectFollower.FollowEvent();
+        #endregion
+
+        #region Modifier Settings
+        [Header("Modifier Settings")]
+        [Tooltip("Determines whether the offset will be applied on the modification.")]
+        [SerializeField]
+        private bool applyOffset = true;
+        /// <summary>
+        /// Determines whether the offset will be applied on the modification.
+        /// </summary>
+        public bool ApplyOffset
+        {
+            get
+            {
+                return applyOffset;
+            }
+            set
+            {
+                applyOffset = value;
+            }
+        }
+        #endregion
+
+        /// <summary>
+        /// The event data to emit before and after the property has been modified.
+        /// </summary>
+        protected readonly ObjectFollower.EventData eventData = new ObjectFollower.EventData();
+
+        /// <summary>
+        /// Attempts to modify the target.
+        /// </summary>
+        /// <param name="data">Event data that contains the required modifier properties.</param>
+        public virtual void Modifiy(ObjectFollower.EventData data)
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            Modify(data.EventSource, data.EventTarget, data.EventTargetOffset);
+        }
+
+        /// <summary>
+        /// Attempts modify the target.
+        /// </summary>
+        /// <param name="source">The source to utilize in the modification.</param>
+        /// <param name="target">The target to modify.</param>
+        /// <param name="offset">The offset of the target against the source when modifying.</param>
+        public virtual void Modify(GameObject source, GameObject target, GameObject offset = null)
+        {
+            if (!this.IsValidState() || source == null || target == null)
+            {
+                return;
+            }
+
+            offset = ApplyOffset ? offset : null;
+
+            Premodified?.Invoke(eventData.Set(source, target, offset));
+            DoModify(source, target, offset);
+            Modified?.Invoke(eventData.Set(source, target, offset));
+        }
+
+        /// <summary>
+        /// Attempts modify the target.
+        /// </summary>
+        /// <param name="source">The source to utilize in the modification.</param>
+        /// <param name="target">The target to modify.</param>
+        /// <param name="offset">The offset of the target against the source when modifying.</param>
+        protected abstract void DoModify(GameObject source, GameObject target, GameObject offset = null);
+    }
+}

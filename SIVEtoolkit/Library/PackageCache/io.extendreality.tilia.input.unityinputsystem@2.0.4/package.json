@@ -1,0 +1,56 @@
+{
+    "name": "io.extendreality.tilia.input.unityinputsystem",
+    "displayName": "Tilia Input UnityInputSystem",
+    "description": "Input wrappers for the Unity Input System and a collection of common input prefabs.",
+    "changelogUrl": "https://github.com/ExtendRealityLtd/Tilia.Input.UnityInputSystem/blob/master/CHANGELOG.md",
+    "documentationUrl": "https://github.com/ExtendRealityLtd/Tilia.Input.UnityInputSystem/tree/master/Documentation",
+    "licensesUrl": "https://github.com/ExtendRealityLtd/Tilia.Input.UnityInputSystem/blob/master/LICENSE.md",
+    "version": "2.0.4",
+    "unity": "2019.1",
+    "unityRelease": "0f1",
+    "keywords": [
+        "pattern",
+        "input",
+        "controller",
+        "vr",
+        "ar",
+        "xr",
+        "spatial"
+    ],
+    "homepage": "https://github.com/ExtendRealityLtd/Tilia.Input.UnityInputSystem/",
+    "bugs": {
+        "url": "https://github.com/ExtendRealityLtd/Tilia.Input.UnityInputSystem/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com/ExtendRealityLtd/Tilia.Input.UnityInputSystem.git"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Extend Reality Ltd",
+        "email": "hello@extendreality.io",
+        "url": "https://github.com/ExtendRealityLtd"
+    },
+    "dependencies": {
+        "io.extendreality.zinnia.unity": "2.3.0",
+        "com.unity.inputsystem": "1.0.2"
+    },
+    "samples": [
+        {
+            "displayName": "GenericXR",
+            "description": "Controller Mappings for Generic XR Controllers",
+            "path": "Samples~/GenericXR"
+        }
+    ],
+    "files": [
+        "*.md",
+        "*.meta",
+        "*.asmdef",
+        "*.xml",
+        "Documentation",
+        "Editor",
+        "Runtime",
+        "docfx.json",
+        "Samples~"
+    ]
+}
