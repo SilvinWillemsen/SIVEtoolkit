@@ -246,3 +246,4 @@ Received Import Request.
 Start importing Assets/Scripts/ImportPluginList.cs using Guid(cb7581cfe78da44c49ade1226d6f1261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4252abedc8538b7c7a6f75616d5638de') in 0.004029 seconds 
   Import took 0.009944 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
