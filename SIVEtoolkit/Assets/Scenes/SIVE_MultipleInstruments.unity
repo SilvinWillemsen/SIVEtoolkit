@@ -191,10 +191,6 @@ MonoBehaviour:
   pluginNames:
   - Guitar
   - Harp
-  - BanjoLele
-  - Timpani
-  - Cello
-  - Marimba
 --- !u!4 &99023001
 Transform:
   m_ObjectHideFlags: 0
@@ -4012,10 +4008,6 @@ MonoBehaviour:
   pluginList:
   - Guitar
   - Harp
-  - BanjoLele
-  - Timpani
-  - Cello
-  - Marimba
   InstrumentType: Guitar
 --- !u!1001 &1241931927
 PrefabInstance:
@@ -5345,10 +5337,6 @@ MonoBehaviour:
   pluginList:
   - Guitar
   - Harp
-  - BanjoLele
-  - Timpani
-  - Cello
-  - Marimba
   InstrumentType: Harp
 --- !u!114 &1729925800
 MonoBehaviour:

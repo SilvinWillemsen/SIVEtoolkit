@@ -15,7 +15,6 @@ public class ImportPluginList : MonoBehaviour
     void Start()
     {
         // PrintPluginNamesFromPlugin();
-
         // check if presetlist from the plugin has changed
         if (pluginNames.Count != getNumPresets())
         {
@@ -32,6 +31,8 @@ public class ImportPluginList : MonoBehaviour
 
                 if (pluginNames[i] != pluginName) // a plugin has changed, so refresh the plugin list! 
                 {
+                    Debug.Log("Plugin Name " + pluginNames[i] + " is not equal to " + pluginName);
+
                     refreshPluginList();
                     break;
                 }
@@ -53,8 +54,7 @@ public class ImportPluginList : MonoBehaviour
 
     void refreshPluginList()
     {
-        Debug.Log("Refreshing plugin list!!");
-        Debug.LogError ("MAKE SURE YOU RESELECT THE RIGHT IN THE SELECTPRESET COMPONENT OF EACH MODEL!");
+        Debug.LogError ("PRESET LIST HAS CHANGED: Make sure you reselect the right preset in the SelectPreset component of each instrument model! (Hierarchy: Structure/Instrument Displays/<Instrument>/<Interactable>/MeshContainer/<Model>)");
 
         pluginNames.Clear();
         for (int i = 0; i < getNumPresets(); ++i)
