@@ -53,8 +53,8 @@ sysinfo.txt
 
 # Builds
 *.apk
-!SIVEtoolkit.unitypackage
 *.unitypackage
+!SIVEtoolkit.unitypackage
 
 # Crashlytics generated file
 crashlytics-build.properties
