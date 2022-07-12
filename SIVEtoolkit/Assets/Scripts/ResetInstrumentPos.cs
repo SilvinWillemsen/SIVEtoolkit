@@ -79,13 +79,11 @@ public class ResetInstrumentPos : MonoBehaviour
         } 
         else 
         {
-            Debug.Log("Index of model to spawn is " + idx);
             if(moveToStage)
             {
                 Vector3 instrumentLocToUse = new Vector3 (instrumentStageLoc.x + (thisInstrument.name == "Harp" ? 0.25f : 0), instrumentStageLoc.y + (thisInstrument.name == "Harp" ? 0.75f : 0.25f), instrumentStageLoc.z);
                 Global.SpawnSingleInteractable(thisInstrument.transform.GetChild(0), spawnTime, instrumentLocToUse, instrumentStage.transform.rotation, true);
                 //thisInstrument.GetComponent<Rigidbody>().isKinematic = true;
-                Debug.Log(instrumentStage.transform.localRotation);
             }
             else
             {

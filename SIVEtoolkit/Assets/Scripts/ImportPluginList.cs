@@ -31,8 +31,6 @@ public class ImportPluginList : MonoBehaviour
 
                 if (pluginNames[i] != pluginName) // a plugin has changed, so refresh the plugin list! 
                 {
-                    Debug.Log("Plugin Name " + pluginNames[i] + " is not equal to " + pluginName);
-
                     refreshPluginList();
                     break;
                 }
@@ -44,7 +42,6 @@ public class ImportPluginList : MonoBehaviour
         {
             if (child.GetChild(0).tag == "Instrument")
             {
-                Debug.Log("TEST");
                 GameObject model = child.GetChild(0).GetChild(0).GetChild(1).gameObject;
                 AddPluginsToModelList(model); 
             }
@@ -63,7 +60,6 @@ public class ImportPluginList : MonoBehaviour
             String pluginName = pluginNamePre;
             pluginName = pluginName.Split('_')[0];
  
-            Debug.Log(pluginName + "Added to list!");
             pluginNames.Add(pluginName);
         }
 
@@ -77,7 +73,6 @@ public class ImportPluginList : MonoBehaviour
                     Debug.LogWarning("Should be looking at model here!");
                     continue;
                 }
-                Debug.Log("Clearing " + model.name + "'s list");
                 model.GetComponent<SelectPreset>().pluginList.Clear();
 
                 AddPluginsToModelList (model);
@@ -88,12 +83,9 @@ public class ImportPluginList : MonoBehaviour
 
     void AddPluginsToModelList(GameObject model)
     {
-        Debug.Log("Adding to " + model.name + "'s list");
         for (int i = 0; i < getNumPresets(); ++i)
             if (!model.GetComponent<SelectPreset>().pluginList.Contains(pluginNames[i]))
                 model.GetComponent<SelectPreset>().pluginList.Add(pluginNames[i]);
-        Debug.Log("Adding to NameList");
-
     }
 
 
@@ -102,7 +94,6 @@ public class ImportPluginList : MonoBehaviour
         for (int i = 0; i < getNumPresets(); ++i)
         {
             string pluginNamePre = Marshal.PtrToStringAnsi(getPresetAt(i));
-            Debug.Log (pluginNamePre);
         }
     }
 

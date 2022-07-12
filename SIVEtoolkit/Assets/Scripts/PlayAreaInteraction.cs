@@ -38,7 +38,6 @@ public class PlayAreaInteraction : MonoBehaviour
 
     public void SetInstrumentType(String instrumentTypeToSet)
     {
-        Debug.Log("instrumentTypeToSet is " + instrumentTypeToSet);
         instrumentType = instrumentTypeToSet;
     }
 
@@ -178,8 +177,6 @@ public class PlayAreaInteraction : MonoBehaviour
                     Vector3 velInteractable = (GetComponent<VelocityTracker>() == null) ? Vector3.zero : GetComponent<VelocityTracker>().getVelocity();
                     Vector3 vel = other.GetComponent<VelocityTracker>().getVelocity() - velInteractable;
                     
-                    Debug.Log("Vel interactable: " + velInteractable + " " + " Bow velocity " + other.GetComponent<VelocityTracker>().getVelocity());
-
                     // Use the magnitude
                     float velToMixer = Global.Limit(Math.Sign(vel.x) * vel.magnitude + 0.5f, 0, 1);
                     audioMixer.SetFloat("velocity", Global.Limit(velToMixer, 0.0f, 1.0f));

@@ -95,7 +95,6 @@ public class Global : MonoBehaviour
             {
                 Vector3 newPos = new Vector3(Mathf.Cos(angle) * radius, 0.0f, Mathf.Sin(angle) * radius);
                 instruments[i].transform.localPosition = newPos;
-                Debug.Log(instruments[i].name + " gets position " + newPos);
             }
         }
     }

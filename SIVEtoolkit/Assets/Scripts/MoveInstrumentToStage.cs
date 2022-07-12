@@ -102,25 +102,4 @@ public class MoveInstrumentToStage : MonoBehaviour
             }
         } 
     }
-
-    // All of the following just used for testing.. Not working!
-    public void BeforeGrabbedTest(GameObject harp)
-    {
-        Debug.Log("Before Grabbed");
-        Debug.Log(harp.GetComponent<Rigidbody>());
-        Debug.Log("Current interactable: " + distanceGrabber.GetComponent<Tilia.Interactions.PointerInteractors.DistanceGrabberFacade>());
-
-
-        //distanceGrabber.GetComponent<Tilia.Interactions.PointerInteractors.DistanceGrabberFacade>().GrabCanceled.Invoke(harp.GetComponent<Tilia.Interactions.Interactables.Interactables.InteractableFacade>());
-        Debug.Log("Invoke cancelgrab");
-
-        //interactor.GetComponent<Tilia.Interactions.Interactables.Interactors.InteractorFacade>().GrabAction.GetComponent<BooleanAction>().Deactivated.Invoke(false);
-        //interactor.GetComponent<Tilia.Interactions.Interactables.Interactors.InteractorFacade>().Ungrab();
-
-    }
-    public void AfterGrabbedTest()
-    {
-        //Debug.Log("Current interactable: " + distanceGrabber.GetComponent<Tilia.Interactions.PointerInteractors.DistanceGrabberFacade>().CurrentInteractable);
-        Debug.Log("CancelInvoke");
-    }
 }

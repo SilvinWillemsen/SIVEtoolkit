@@ -9,16 +9,10 @@ public class GetPresetList : MonoBehaviour
     // Use this for initialization
     void OnEnable()
     {
-        Debug.Log(getNumPresets());
         for (int i = 0; i < getNumPresets(); ++i)
         {
             string test = Marshal.PtrToStringAuto (getPresetAt(i));
-            Debug.Log (test);
         }
-        // for (int i = 0; i < getNumPresets(); ++i)
-        // {
-        //     Debug.Log (test);
-        // }
     }
 
     // // //------------------------------------------------------------------------------------------------

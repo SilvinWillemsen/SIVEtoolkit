@@ -38,19 +38,22 @@ public class SetCameraRig : MonoBehaviour
     public GameObject instrumentDisplays;
     public GameObject exciters;
 
+    private bool started = false;
+
     // Start is called before the first frame update
     void Start()
     {
         curXRSetup = xrSetup;
+        started = true;
     }
 
     // Update is called once per frame
     void OnValidate()
     {
-        Debug.Log("OnValidate");
+        if (!started)
+            return;
         if (curXRSetup != xrSetup)
         {
-            //StartCoroutine (ChangeXRSettings());
             ChangeXRSettings();
             curXRSetup = xrSetup;
         }
@@ -61,12 +64,9 @@ public class SetCameraRig : MonoBehaviour
         bool switchToOculus = xrSetup == XRsetup.UseOculus;
         Debug.Log(xrSetup == XRsetup.UseOculus ? "Changing to Oculus" : "Changing to Simulator");
 
-        Debug.Log("Activating correct GameObject");
         // Activate the correct GameObject
         OculusCameraRig.gameObject.SetActive (switchToOculus);
         SimulatorCameraRig.gameObject.SetActive (!switchToOculus);
-
-        Debug.Log("Change interactor grip settings");
 
         // Change interactor grip settings using serializedobjects
         var leftSO = new SerializedObject(LeftInteractorObj.GetComponent<InteractorFacade>());
@@ -83,8 +83,6 @@ public class SetCameraRig : MonoBehaviour
 
 
         // Change the Tracked alias list (apparently no need for serializedobjects)
-        Debug.Log("Change the Tracked alias list");
-
         TrackedAliasObj.GetComponent<TrackedAliasFacade>().CameraRigs.Clear();
         TrackedAliasObj.GetComponent<TrackedAliasFacade>().CameraRigs.Add(switchToOculus ? OculusCameraRig : SimulatorCameraRig);
 
@@ -104,7 +102,6 @@ public class SetCameraRig : MonoBehaviour
         {
             if (child.GetChild(0).tag == "Exciter")
             {
-                Debug.Log("Changing to " + switchToOculus + " for " + child.GetChild(0).name);
                 var interactableSO = new SerializedObject(child.GetChild(0).GetComponent<InteractableFacade>());
                 interactableSO.FindProperty("grabType").enumValueIndex = switchToOculus ? 0 : 1; // 0: Hold Till Release, 1: Toggle
                 interactableSO.ApplyModifiedProperties();

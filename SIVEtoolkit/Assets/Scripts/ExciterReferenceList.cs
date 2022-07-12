@@ -17,8 +17,6 @@ public class ExciterReferenceList : MonoBehaviour
             exciters.Add(child.gameObject);
 
         }
-        // exciterStartPos.Add(child.gameObject.transform.localPosition);
-        // exciterStartOrientation.Add(child.gameObject.transform.localRotation);
 
         foreach (GameObject exciters in exciters)
         {
@@ -26,10 +24,6 @@ public class ExciterReferenceList : MonoBehaviour
             {
                 if (child.tag == "Exciter")
                 {
-                    // Debug.Log("Looking at " + child.GetChild(0).name);
-                    // child.gameObject.GetComponent<Rigidbody>().useGravity = true;
-                    // child.GetChild(0).gameObject.AddComponent<AnimationCallBack>();
-
                     exciterStartPos.Add(child.gameObject.transform.localPosition);
                     exciterStartOrientation.Add(child.gameObject.transform.localRotation);
                 }

@@ -16,13 +16,10 @@ public class ChangePreset : MonoBehaviour
     void Start()
     {
         numPresets = getNumPresets();
-        Debug.Log("Number of presets in app = " + numPresets);
         float currentPresetFloat;
         audioMixer.GetFloat ("presetSelect", out currentPresetFloat);
-        Debug.Log("CurrentPresetFloat = " + currentPresetFloat);
 
         currentlyActivePreset = (int)Mathf.Floor (currentPresetFloat * numPresets);
-        Debug.Log("currentlyActivePreset = " + currentlyActivePreset);
         presetToLoad = currentlyActivePreset;
 
     }
@@ -39,8 +36,6 @@ public class ChangePreset : MonoBehaviour
         audioMixer.SetFloat ("loadPreset", 0.0f);
 
         presetToLoad = (presetToLoad + 1) % numPresets;
-        Debug.Log("Right Mouse Button Clicked");
-        Debug.Log("presetToLoad = " + presetToLoad);
         audioMixer.SetFloat ("presetSelect", (presetToLoad + 0.5f) * 1.0f / numPresets);
         if (currentlyActivePreset != presetToLoad)
         {
