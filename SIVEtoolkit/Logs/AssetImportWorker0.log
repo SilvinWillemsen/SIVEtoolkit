@@ -304,3 +304,4 @@ Received Import Request.
 Start importing Assets/Plugins/audioplugin_ModularVST.bundle/Contents/MacOS/audioplugin_ModularVST using Guid(3cf4c8205e13a4a0ab0846fc61d4e901) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '116abe4a81cb1262eef68ac90301816f') in 0.009073 seconds 
   Import took 0.016269 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
