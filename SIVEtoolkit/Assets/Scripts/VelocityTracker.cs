@@ -6,8 +6,8 @@ public class VelocityTracker : MonoBehaviour
 {
 
     private Vector3 prevPosition;
-    private Vector3 curVelocity;
-
+    private Vector3 curVelocity, prevVelocity;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +18,7 @@ public class VelocityTracker : MonoBehaviour
     void FixedUpdate()
     {
         curVelocity = (transform.position - prevPosition) / Time.fixedDeltaTime;
+
         prevPosition = transform.position;
     }
 
