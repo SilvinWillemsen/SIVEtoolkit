@@ -166,3 +166,4 @@ Received Import Request.
 Start importing Assets/Scripts/SetCameraRig.cs using Guid(ad59f78779f178146834982094182e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2936b87eb11f0fa9fbe7adf8e3c2fde3') in 0.282078 seconds 
   Import took 0.290898 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
