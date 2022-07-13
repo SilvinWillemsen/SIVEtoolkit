@@ -79,7 +79,7 @@ public class SetCameraRig : MonoBehaviour
         rightSO.ApplyModifiedProperties();
 
 
-        // Change the Tracked alias list
+        // Change the Tracked alias list (does not seem to work for windows..)
         var rigSO = new SerializedObject(TrackedAliasObj.GetComponent<TrackedAliasFacade>());
         var rigs = TrackedAliasObj.GetComponent<TrackedAliasFacade>().CameraRigs;
         rigs.Clear();
