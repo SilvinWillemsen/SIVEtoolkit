@@ -78,13 +78,14 @@ public class SetCameraRig : MonoBehaviour
         rightSO.FindProperty("grabAction").objectReferenceValue = switchToOculus ? OculusRightGrip : SimulatorRightGrip;
         rightSO.ApplyModifiedProperties();
 
-        // LeftInteractorObj.GetComponent<InteractorFacade>().GrabAction = switchToOculus ? OculusLeftGrip : SimulatorLeftGrip;
-        // RightInteractorObj.GetComponent<InteractorFacade>().GrabAction = switchToOculus ? OculusRightGrip : SimulatorRightGrip;
 
-
-        // Change the Tracked alias list (apparently no need for serializedobjects)
-        TrackedAliasObj.GetComponent<TrackedAliasFacade>().CameraRigs.Clear();
-        TrackedAliasObj.GetComponent<TrackedAliasFacade>().CameraRigs.Add(switchToOculus ? OculusCameraRig : SimulatorCameraRig);
+        // Change the Tracked alias list
+        var rigSO = new SerializedObject(TrackedAliasObj.GetComponent<TrackedAliasFacade>());
+        var rigs = TrackedAliasObj.GetComponent<TrackedAliasFacade>().CameraRigs;
+        rigs.Clear();
+        rigs.Add(switchToOculus ? OculusCameraRig : SimulatorCameraRig);
+        rigSO.FindProperty("cameraRigs").objectReferenceValue = rigs;
+        rigSO.ApplyModifiedProperties();
 
         // Change grabaction in instrument interactables
         foreach (Transform child in instrumentDisplays.transform)
