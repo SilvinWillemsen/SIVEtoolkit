@@ -137,7 +137,6 @@ public class PlayAreaInteraction : MonoBehaviour
             xPos = Global.Limit(Global.Map(localPos.x, -0.5f, 0.5f, 0, 1), 0, 1);
             yPos = 1.0f - Global.Limit(Global.Map(localPos.y, -0.5f, 0.5f, 0, 1), 0, 1);
 
-            Debug.Log(xPos + " " + yPos);
             // Hard-coded mappings of the play area to the x and y positions //
             switch (instrumentType)
             {
@@ -246,7 +245,7 @@ public class PlayAreaInteraction : MonoBehaviour
         {
             // mapping of the visual slope of the white notes
             yPos = yPos * 2;
-            yPos = Global.Map(yPos, 0.5f * xPos, 1, 0, 1);
+            yPos = Global.Map(yPos, 0.67f * xPos, 1, 0, 1);
             // 49 notes, only select the first 29
             xPos *= 29.0f/49.0f;
         }
@@ -254,7 +253,7 @@ public class PlayAreaInteraction : MonoBehaviour
         {       
             // mapping of the visual slope of the black notes
             yPos = (yPos - 0.5f) * 2;
-            yPos = Global.Map(yPos, 0, (1-0.5f * xPos), 0, 1);
+            yPos = Global.Map(yPos, 0, (1-0.67f * xPos), 0, 1);
 
             // exclude the "holes" between the black notes
             float barWidth = 1.0f/29.0f; // the width of a bar as the ratio of the playarea
