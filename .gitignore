@@ -10,13 +10,13 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 
-SIVEtoolkit/[Ll]ibrary/
-SIVEtoolkit/[Tt]emp/
-SIVEtoolkit/[Oo]bj/
-SIVEtoolkit/[Bb]uild/
-SIVEtoolkit/[Bb]uilds/
-SIVEtoolkit/[Ll]ogs/
-SIVEtoolkit/[Mm]emoryCaptures/
+/SIVEtoolkit/[Ll]ibrary/
+/SIVEtoolkit/[Tt]emp/
+/SIVEtoolkit/[Oo]bj/
+/SIVEtoolkit/[Bb]uild/
+/SIVEtoolkit/[Bb]uilds/
+/SIVEtoolkit/[Ll]ogs/
+/SIVEtoolkit/[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
