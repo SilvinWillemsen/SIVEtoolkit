@@ -1,0 +1,17 @@
+{
+    "name": "Tilia.Input.UnityInputSystem.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "Zinnia.Runtime",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

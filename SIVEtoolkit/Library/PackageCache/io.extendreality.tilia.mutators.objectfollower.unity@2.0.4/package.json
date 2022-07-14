@@ -1,0 +1,43 @@
+{
+    "name": "io.extendreality.tilia.mutators.objectfollower.unity",
+    "displayName": "Tilia Mutators ObjectFollower Unity",
+    "description": "A mechanism to make a target GameObject follow a source GameObject in the scene for the Unity software.",
+    "changelogUrl": "https://github.com/ExtendRealityLtd/Tilia.Mutators.ObjectFollower.Unity/blob/master/CHANGELOG.md",
+    "documentationUrl": "https://github.com/ExtendRealityLtd/Tilia.Mutators.ObjectFollower.Unity/tree/master/Documentation",
+    "licensesUrl": "https://github.com/ExtendRealityLtd/Tilia.Mutators.ObjectFollower.Unity/blob/master/LICENSE.md",
+    "version": "2.0.4",
+    "unity": "2018.3",
+    "unityRelease": "10f1",
+    "keywords": [
+        "mutator",
+        "follower",
+        "object"
+    ],
+    "homepage": "https://github.com/ExtendRealityLtd/Tilia.Mutators.ObjectFollower.Unity/",
+    "bugs": {
+        "url": "https://github.com/ExtendRealityLtd/Tilia.Mutators.ObjectFollower.Unity/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com/ExtendRealityLtd/Tilia.Mutators.ObjectFollower.Unity.git"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Extend Reality Ltd",
+        "email": "hello@extendreality.io",
+        "url": "https://github.com/ExtendRealityLtd"
+    },
+    "dependencies": {
+        "io.extendreality.zinnia.unity": "2.3.0"
+    },
+    "files": [
+        "*.md",
+        "*.meta",
+        "*.asmdef",
+        "*.xml",
+        "Documentation",
+        "Runtime",
+        "Editor",
+        "docfx.json"
+    ]
+}

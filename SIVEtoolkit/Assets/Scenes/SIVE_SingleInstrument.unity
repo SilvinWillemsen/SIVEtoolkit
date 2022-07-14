@@ -221,6 +221,7 @@ MonoBehaviour:
   pluginNames:
   - Guitar
   - Harp
+  - Marimba
 --- !u!4 &99023001
 Transform:
   m_ObjectHideFlags: 0
@@ -2871,6 +2872,7 @@ MonoBehaviour:
   pluginList:
   - Guitar
   - Harp
+  - Marimba
   InstrumentType: Guitar
 --- !u!1001 &1232188476
 PrefabInstance:

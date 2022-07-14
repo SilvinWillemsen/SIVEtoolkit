@@ -1,0 +1,14 @@
+{
+    "name": "Tilia.CameraRigs.SpatialSimulator.Unity.Runtime",
+    "references": [
+        "Zinnia.Runtime"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
